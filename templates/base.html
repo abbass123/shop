@@ -1,0 +1,166 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>فروشگاه اینترنتی آژمان دیزاین AzhmanDesigne.ir</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/Untitled1.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link href="{% static 'css/filterSelection.css' %}" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+<link href="{% static '' %}css/styles.css" rel="stylesheet" />
+<link href="{% static '' %}main/form.css" rel="stylesheet" />
+<link href="{% static '' %}main/profile.css" rel="stylesheet" />
+<link href="{% static '' %}main/product_detail.css" rel="stylesheet" />
+<link href="{% static '' %}main/shopping-cart.css" rel="stylesheet" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+<script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
+<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.dropdown.min.js' %}" defer></script>
+<script src="{% static 'js/affix.min.js' %}"></script>
+<script src="{% static 'js/scrollspy.min.js' %}"></script>
+<script src="{% static 'js/wwb18.min.js' %}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(event)
+{
+   var menu_dropdownToggle = document.querySelectorAll('#menu .dropdown-toggle');
+   menu_dropdownToggle.forEach(item =>
+   {
+      var dropdown = new bootstrap.Dropdown(item, {popperConfig:{placement:item.getAttribute('data-bs-placement')}});
+   });
+   var menu_dropdown = document.querySelectorAll('#menu .dropdown');
+   menu_dropdown.forEach(item =>
+   {
+      item.addEventListener('shown.bs.dropdown', function(e)
+      {
+         e.currentTarget.classList.add('show');
+      });
+      item.addEventListener('hidden.bs.dropdown', function(e)
+      {
+         e.currentTarget.classList.remove('show');
+      });
+   });
+   $("#wb_menu").affix({offset:{top: $("#wb_menu").offset().top}});
+   var elementslidshow = document.querySelector('#slidshow');
+   elementslidshow.addEventListener('slid.bs.carousel', function(e)
+   {
+      switch(e.to)
+      {
+         case 0:
+            AnimateCss('wb_welcome-text1', 'slide-left-in', 100, 1000);
+            AnimateCss('wb_welcome-text2', 'slide-right-in', 1000, 1000);
+            AnimateCss('welcome-button1', 'slide-down-in', 2000, 1000);
+            break;
+         case 1:
+            AnimateCss('wb_welcome-text3', 'slide-left-in', 100, 1000);
+            AnimateCss('wb_welcome-text4', 'slide-right-in', 1000, 1000);
+            AnimateCss('welcome-button2', 'slide-down-in', 2000, 1000);
+            break;
+         case 2:
+            AnimateCss('wb_welcome-text5', 'slide-left-in', 100, 1000);
+            AnimateCss('wb_welcome-text6', 'slide-right-in', 1000, 1000);
+            AnimateCss('welcome-button3', 'slide-down-in', 2000, 1000);
+            break;
+      }
+   });
+   var slidshow = new bootstrap.Carousel('#slidshow', {interval: 6000, pause: false});
+});
+</script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_FontAwesomeIcon8').addClass('visibility-hidden');
+   $('#wb_FontAwesomeIcon10').addClass('visibility-hidden');
+   $('#wb_FontAwesomeIcon11').addClass('visibility-hidden');
+   $('#ThemeableButton1').addClass('visibility-hidden');
+   $('#ThemeableButton2').addClass('visibility-hidden');
+   $('#ThemeableButton6').addClass('visibility-hidden');
+   $('#ThemeableButton7').addClass('visibility-hidden');
+   $('#ThemeableButton8').addClass('visibility-hidden');
+   function onScrollFontAwesomeIcon8()
+   {
+      var $obj = $("#wb_FontAwesomeIcon8");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon8', 'transform-lightspeed-in', 200, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon8();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon8();
+   });
+   function onScrollFontAwesomeIcon10()
+   {
+      var $obj = $("#wb_FontAwesomeIcon10");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon10', 'transform-lightspeed-in', 300, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon10();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon10();
+   });
+   function onScrollFontAwesomeIcon11()
+   {
+      var $obj = $("#wb_FontAwesomeIcon11");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon11', 'transform-lightspeed-in', 400, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon11();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon11();
+   });
+   $("#wb_menu").affix({offset:{top: $("#wb_menu").offset().top}});
+   function onScrollThemeableButton2()
+   {
+      var $obj = $("#ThemeableButton2");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('ThemeableButton1', 'transform-lightspeed-in', 100, 1000);
+         AnimateCss('ThemeableButton2', 'transform-lightspeed-in', 100, 1000);
+         AnimateCss('ThemeableButton6', 'transform-lightspeed-in', 100, 1000);
+         AnimateCss('ThemeableButton7', 'transform-lightspeed-in', 100, 1000);
+         AnimateCss('ThemeableButton8', 'transform-lightspeed-in', 100, 1000);
+      }
+   }
+   onScrollThemeableButton2();
+   $(window).scroll(function(event)
+   {
+      onScrollThemeableButton2();
+   });
+});
+</script>
+</head>
+<body data-bs-spy="scroll">
+
+  {% block header %} {% include 'main/header.html' %} {% endblock %}
+
+  {% block content %}
+
+
+  {% endblock %}
+
+  {% block footer %} {% include 'main/footer.html' %} {% endblock %}
+
+</body>
+</html>
